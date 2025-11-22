@@ -76,9 +76,63 @@ export const Post = defineDocumentType(() => ({
   computedFields: defaultComputedFields,
 }));
 
+export const News = defineDocumentType(() => ({
+  name: "News",
+  filePathPattern: `news/**/*.mdx`,
+  contentType: "mdx",
+  fields: {
+    title: {
+      type: "string",
+      required: true,
+    },
+    description: {
+      type: "string",
+      required: true,
+    },
+    date: {
+      type: "date",
+      required: true,
+    },
+    image: {
+      type: "string",
+      required: false,
+    },
+    authors: {
+      type: "list",
+      of: { type: "string" },
+      required: false,
+    },
+    categories: {
+      type: "list",
+      of: {
+        type: "string",
+      },
+      required: false,
+    },
+  },
+  computedFields: {
+    slug: {
+      type: "string",
+      resolve: (doc) => `/${doc._raw.flattenedPath}`,
+    },
+    slugAsParams: {
+      type: "string",
+      resolve: (doc) => doc._raw.flattenedPath.split("/").slice(1).join("/"),
+    },
+    images: {
+      type: "list",
+      resolve: (doc) => {
+        return (
+          doc.body.raw.match(/(?<=<Image[^>]*\bsrc=")[^"]+(?="[^>]*\/>)/g) || []
+        );
+      },
+    },
+  },
+}));
+
 export default makeSource({
   contentDirPath: "./content",
-  documentTypes: [Post],
+  documentTypes: [Post, News],
   mdx: {
     remarkPlugins: [remarkGfm],
     rehypePlugins: [

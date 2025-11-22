@@ -1,0 +1,54 @@
+---
+title: "Getting Started with Next.js and Contentlayer"
+description: "Learn how to build a modern blog using Next.js 14, Contentlayer, and Tailwind CSS."
+image: "/_static/blog/blog-post-1.jpg"
+date: "2025-11-22"
+authors:
+  - mickasmt
+categories:
+  - updates
+---
+
+# Introduction
+
+Next.js has revolutionized the way we build React applications. With the App Router, we have even more power at our fingertips. In this guide, we'll explore how to combine Next.js with Contentlayer to create a type-safe, high-performance blog.
+
+## Why Contentlayer?
+
+Contentlayer transforms your content into data. It works by processing your MDX files and generating type-safe JSON data that you can import directly into your application.
+
+### Key Features
+
+- **Type Safety**: Automatically generated TypeScript types for your content.
+- **Performance**: Fast build times and optimized runtime performance.
+- **Flexibility**: Works with any content source, including local files and headless CMSs.
+
+## Setting Up
+
+First, let's install the necessary dependencies:
+
+```bash
+npm install contentlayer next-contentlayer
+```
+
+## Code Example
+
+Here's a simple React component:
+
+```tsx
+import { useState } from 'react';
+
+export function Counter() {
+  const [count, setCount] = useState(0);
+
+  return (
+    <button onClick={() => setCount(count + 1)}>
+      Count: {count}
+    </button>
+  );
+}
+```
+
+## Conclusion
+
+Building a blog with Next.js and Contentlayer is a breeze. The combination of type safety, performance, and developer experience is unmatched.
