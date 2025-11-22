@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Gabarito } from "next/font/google";
 import { cn } from "@/lib/utils";
 import "./globals.css";
+import { SiteFooter } from "@/components/layout/site-footer";
+import { SiteHeader } from "@/components/layout/site-header";
 
 const gabarito = Gabarito({
   subsets: ["latin"],
@@ -27,7 +29,9 @@ export default function RootLayout({
           "min-h-screen bg-background font-sans antialiased"
         )}
       >
-        {children}
+        <SiteHeader />
+        <main className="flex-1">{children}</main>
+        <SiteFooter />
       </body>
     </html>
   );
