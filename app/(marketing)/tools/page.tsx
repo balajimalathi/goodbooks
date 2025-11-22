@@ -11,7 +11,7 @@ export default function ToolsPage() {
   const [selectedPricing, setSelectedPricing] = useState<string | null>(null)
 
   const categories = Array.from(new Set(TOOLS.map((t) => t.category)))
-  const pricingOptions = Array.from(new Set(TOOLS.map((t) => t.pricing)))
+  const pricingOptions = Array.from(new Set(TOOLS.map((t) => t.pricingModel)))
 
   const filteredTools = useMemo(() => {
     return TOOLS.filter((tool) => {
@@ -22,7 +22,7 @@ export default function ToolsPage() {
         ? tool.category === selectedCategory
         : true
       const matchesPricing = selectedPricing
-        ? tool.pricing === selectedPricing
+        ? tool.pricingModel === selectedPricing
         : true
 
       return matchesSearch && matchesCategory && matchesPricing
@@ -57,8 +57,8 @@ export default function ToolsPage() {
             <button
               onClick={() => setSelectedCategory(null)}
               className={`inline-flex items-center justify-center rounded-full border px-3 py-1 text-sm font-medium transition-colors ${selectedCategory === null
-                  ? "bg-primary text-primary-foreground hover:bg-primary/90"
-                  : "bg-transparent text-muted-foreground hover:bg-secondary"
+                ? "bg-primary text-primary-foreground hover:bg-primary/90"
+                : "bg-transparent text-muted-foreground hover:bg-secondary"
                 }`}
             >
               All
@@ -68,8 +68,8 @@ export default function ToolsPage() {
                 key={category}
                 onClick={() => setSelectedCategory(category)}
                 className={`inline-flex items-center justify-center rounded-full border px-3 py-1 text-sm font-medium transition-colors ${selectedCategory === category
-                    ? "bg-primary text-primary-foreground hover:bg-primary/90"
-                    : "bg-transparent text-muted-foreground hover:bg-secondary"
+                  ? "bg-primary text-primary-foreground hover:bg-primary/90"
+                  : "bg-transparent text-muted-foreground hover:bg-secondary"
                   }`}
               >
                 {category}
@@ -85,8 +85,8 @@ export default function ToolsPage() {
                   setSelectedPricing(selectedPricing === pricing ? null : pricing)
                 }
                 className={`inline-flex items-center justify-center rounded-md border px-3 py-1 text-sm font-medium transition-colors ${selectedPricing === pricing
-                    ? "bg-secondary text-secondary-foreground"
-                    : "bg-transparent text-muted-foreground hover:bg-secondary/50"
+                  ? "bg-secondary text-secondary-foreground"
+                  : "bg-transparent text-muted-foreground hover:bg-secondary/50"
                   }`}
               >
                 {pricing}
