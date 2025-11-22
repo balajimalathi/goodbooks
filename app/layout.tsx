@@ -58,9 +58,12 @@ export default function RootLayout({
     <html lang="en" className={gabarito.variable} suppressHydrationWarning>
       <body
         className={cn(
-          "min-h-screen bg-background font-sans antialiased"
+          "min-h-screen bg-background font-sans antialiased relative overflow-x-hidden"
         )}
       >
+        {/* Background Gradient */}
+        <div className="absolute left-1/2 top-0 -z-10 h-[1000px] w-[1000px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/10 blur-3xl" />
+
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
@@ -68,7 +71,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <SiteHeader />
-          <main className="flex-1">{children}</main>
+          <main className="flex-1 pt-24">{children}</main>
           <SiteFooter />
         </ThemeProvider>
       </body>

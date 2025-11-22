@@ -8,7 +8,7 @@ export function HeroSection() {
   const popularTools = TOOLS.filter((t) => t.popular).length
 
   return (
-    <section className="relative overflow-hidden pb-16 pt-24 md:pb-32 md:pt-48">
+    <section className="relative overflow-hidden pb-16 pt-16 md:pb-24 md:pt-16">
       <div className="container relative z-10 flex flex-col items-center text-center">
         <div className="mb-6 inline-flex items-center gap-2 rounded-full border bg-background px-4 py-1.5 text-sm font-medium text-muted-foreground backdrop-blur">
           <Sparkles className="h-4 w-4 text-primary" />
@@ -26,7 +26,7 @@ export function HeroSection() {
         <HeroPrompt />
 
         {/* Social Proof */}
-        <div className="mt-12 flex flex-wrap items-center justify-center gap-6 text-sm text-muted-foreground">
+        <div className="mt-6 flex flex-wrap items-center justify-center gap-6 text-sm text-muted-foreground">
           <div className="flex items-center gap-2">
             <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary/10">
               <span className="text-lg">🔧</span>
@@ -48,8 +48,7 @@ export function HeroSection() {
         </div>
       </div>
 
-      {/* Background Gradient */}
-      <div className="absolute left-1/2 top-0 -z-10 h-[1000px] w-[1000px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/10 blur-3xl" />
+
     </section>
   )
 }

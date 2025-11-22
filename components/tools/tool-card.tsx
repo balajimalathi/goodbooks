@@ -48,7 +48,7 @@ export function ToolCard({ tool }: ToolCardProps) {
             </div>
           </div>
         </div>
-        <p className="mb-1 text-xs text-muted-foreground">{tool.tagline}</p>
+
         <p className="mb-4 line-clamp-2 text-sm text-foreground">
           {tool.description}
         </p>
@@ -64,21 +64,7 @@ export function ToolCard({ tool }: ToolCardProps) {
           </span>
         </div>
 
-        <div className="mt-auto flex flex-wrap gap-1">
-          {tool.features.slice(0, 3).map((feature) => (
-            <span
-              key={feature}
-              className="inline-flex items-center rounded-md bg-secondary px-2 py-1 text-xs font-medium text-secondary-foreground"
-            >
-              {feature}
-            </span>
-          ))}
-          {tool.features.length > 3 && (
-            <span className="inline-flex items-center rounded-md bg-secondary px-2 py-1 text-xs font-medium text-secondary-foreground">
-              +{tool.features.length - 3}
-            </span>
-          )}
-        </div>
+
 
         <div className="mt-4 pt-4 border-t flex items-center justify-between">
           <Link

@@ -51,12 +51,11 @@ export default function UpdatesPage() {
   return (
     <div className="min-h-screen">
       {/* Hero */}
-      <section className="border-b bg-gradient-to-b from-muted/30 to-background py-16 md:py-24">
+      <section className="border-b py-16 md:py-24">
         <div className="container">
           <div className="mx-auto max-w-3xl text-center">
             <div className="mb-4 inline-flex items-center gap-2 rounded-full border bg-background px-4 py-1.5 text-xs font-medium">
-              <Calendar className="h-3 w-3" />
-              Updated Daily
+              📅 Updated Daily
             </div>
             <h1 className="mb-6 font-heading text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
               Real-Time Updates
