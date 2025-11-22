@@ -1,0 +1,69 @@
+.mdx> :first-child {
+  margin-top: 0;
+}
+
+.mdx {
+  font-family: var(--font-gabarito);
+}
+
+.prose code,
+.prose pre {
+  font-family: var(--font-gabarito) !important;
+}
+
+.prose .anchor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  margin-left: -1em;
+  padding-right: 0.5em;
+  width: 80%;
+  max-width: 700px;
+  cursor: pointer;
+}
+
+.anchor:hover {
+  text-decoration: none;
+}
+
+.prose *:hover>.anchor {
+  display: block;
+}
+
+.prose pre {
+  background-color: #0d1117;
+  border: 1px solid #30363d;
+}
+
+.prose code {
+  background-color: rgba(110, 118, 129, 0.4);
+  padding: 0.2em 0.4em;
+  border-radius: 6px;
+  font-size: 85%;
+}
+
+.prose pre code {
+  background-color: transparent;
+  padding: 0;
+  border-radius: 0;
+  font-size: 100%;
+}
+
+[data-rehype-pretty-code-figure] pre {
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+[data-rehype-pretty-code-figure] code {
+  display: grid;
+}
+
+[data-rehype-pretty-code-figure] [data-line] {
+  border-left: 2px solid transparent;
+  padding: 0 1rem;
+}
+
+[data-rehype-pretty-code-figure] [data-line]:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}

@@ -1,7 +1,8 @@
-import type { NextConfig } from "next";
+const { withContentlayer } = require("next-contentlayer2");
 
-const nextConfig: NextConfig = {
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   /* config options here */
 };
 
-export default nextConfig;
+module.exports = withContentlayer(nextConfig);
