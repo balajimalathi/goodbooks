@@ -5,6 +5,7 @@
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.x-blue)
 
 > A modern, feature-rich platform for discovering, comparing, and reviewing SaaS tools with an integrated blog and news system.
+<img width="1898" height="913" alt="image" src="https://github.com/user-attachments/assets/fded3a44-f9ac-424b-bdae-5639a36c2d74" />
 
 ## 🚀 Project Vision
 
