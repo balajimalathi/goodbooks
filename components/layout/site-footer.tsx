@@ -22,6 +22,16 @@ export function SiteFooter() {
                 </Link>
               </li>
               <li>
+                <Link href="/alternatives" className="hover:text-foreground">
+                  Alternatives
+                </Link>
+              </li>
+              <li>
+                <Link href="/updates" className="hover:text-foreground">
+                  Updates
+                </Link>
+              </li>
+              <li>
                 <Link href="/blog" className="hover:text-foreground">
                   Blog
                 </Link>
@@ -29,11 +39,16 @@ export function SiteFooter() {
             </ul>
           </div>
           <div>
-            <h3 className="mb-4 text-sm font-semibold">Company</h3>
+            <h3 className="mb-4 text-sm font-semibold">Resources</h3>
             <ul className="space-y-3 text-sm text-muted-foreground">
               <li>
                 <Link href="/about" className="hover:text-foreground">
                   About
+                </Link>
+              </li>
+              <li>
+                <Link href="/newsletter" className="hover:text-foreground">
+                  Newsletter
                 </Link>
               </li>
               <li>

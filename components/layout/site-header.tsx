@@ -23,10 +23,28 @@ export function SiteHeader() {
               Tools
             </Link>
             <Link
+              href="/alternatives"
+              className="flex items-center text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+            >
+              Alternatives
+            </Link>
+            <Link
+              href="/updates"
+              className="flex items-center text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+            >
+              Updates
+            </Link>
+            <Link
               href="/blog"
               className="flex items-center text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
             >
               Blog
+            </Link>
+            <Link
+              href="/about"
+              className="flex items-center text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+            >
+              About
             </Link>
           </nav>
         </div>
@@ -55,11 +73,32 @@ export function SiteHeader() {
               Tools
             </Link>
             <Link
+              href="/alternatives"
+              className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Alternatives
+            </Link>
+            <Link
+              href="/updates"
+              className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Updates
+            </Link>
+            <Link
               href="/blog"
               className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
               onClick={() => setIsMenuOpen(false)}
             >
               Blog
+            </Link>
+            <Link
+              href="/about"
+              className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              About
             </Link>
           </nav>
         </div>
