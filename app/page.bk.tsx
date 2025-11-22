@@ -10,8 +10,8 @@ export default function LandingPage() {
   return (
     <div className="flex flex-col">
       <HeroSection />
-      <UpdatesSection />
       <FeaturedToolsSection />
+      <UpdatesSection />
       <AlternativesSection />
       <DeepdiveSection />
       <RecentBlogs />

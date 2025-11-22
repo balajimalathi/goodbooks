@@ -1,4 +1,5 @@
 import Link from "next/link"
+import { ThemeToggle } from "@/components/theme-toggle"
 
 export function SiteFooter() {
   return (
@@ -74,8 +75,9 @@ export function SiteFooter() {
             </ul>
           </div>
         </div>
-        <div className="mt-10 border-t pt-8 text-center text-sm text-muted-foreground">
+        <div className="mt-10 flex flex-col items-center justify-between gap-4 border-t pt-8 text-center text-sm text-muted-foreground md:flex-row">
           <p>&copy; {new Date().getFullYear()} Goodbooks. All rights reserved.</p>
+          <ThemeToggle />
         </div>
       </div>
     </footer>

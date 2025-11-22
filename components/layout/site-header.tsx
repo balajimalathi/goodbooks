@@ -4,13 +4,14 @@ import * as React from "react"
 import Link from "next/link"
 import { Menu, X } from "lucide-react"
 import { cn } from "@/lib/utils"
+import { ThemeToggle } from "@/components/theme-toggle"
 
 export function SiteHeader() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false)
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-16 items-center justify-between">
+    <header className="fixed top-4 left-1/2 z-50 w-[95%] max-w-5xl -translate-x-1/2 rounded-full border bg-background/70 backdrop-blur-md shadow-sm supports-[backdrop-filter]:bg-background/60">
+      <div className="container flex h-14 items-center justify-between px-4 md:px-8">
         <div className="flex items-center gap-6 md:gap-10">
           <Link href="/" className="flex items-center space-x-2">
             <span className="font-heading text-xl font-bold">Goodbooks</span>
@@ -49,6 +50,7 @@ export function SiteHeader() {
           </nav>
         </div>
         <div className="flex items-center gap-4">
+          <ThemeToggle />
           <button
             className="md:hidden"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -63,7 +65,7 @@ export function SiteHeader() {
         </div>
       </div>
       {isMenuOpen && (
-        <div className="container md:hidden">
+        <div className="absolute top-full left-0 mt-2 w-full rounded-2xl border bg-background/95 p-4 shadow-lg backdrop-blur-md">
           <nav className="flex flex-col gap-4 py-4">
             <Link
               href="/tools"
